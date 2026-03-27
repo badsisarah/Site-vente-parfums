@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+  margin:0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+  background:url(p.jpeg);
+}
+
+
+
+/* Fin de la barre de navigation */
+
+
+/*nouveau header*/
+header{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  height:60px;
+  align-items: center;
+  background: white;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  transition: 0.6s;
+  padding-left: : 50px;
+  }
+
+
+header .nav{
+  position: relative;
+  line-height: 75px;
+  transition: 0.6s;
+  transition-property: line-height;
+}
+
+header.sticky .nav{
+  line-height: 60px;
+}
+
+header .nav .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  user-select: none;
+}
+
+ .menu-item > a{
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  margin: 20px;
+  padding: 10px 0;
+  
+}
+
+.menu-item > a:hover{
+  color: #469DFF;
+  transition: 0.3s;
+}
+
+.menu-item .sub-menu{
+  position: absolute;
+  background: #23252B;
+  top: 70px;
+  line-height: 40px;
+  list-style: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  pointer-events: none;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s;
+  transition-property: transform, opacity;
+}
+
+header.sticky .menu-item .sub-menu{
+  top: 60px;
+}
+
+.menu-item:hover .sub-menu{
+  pointer-events: all;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu-item .sub-menu .sub-item{
+  position: relative;
+  padding: 7px 0;
+  cursor: pointer;
+  box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item .sub-menu .sub-item a{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+
+.menu-item .sub-menu .sub-item:hover{
+  background: #4080EF;
+}
+
+.menu-item .sub-menu .sub-item:last-child:hover{
+  border-radius: 0 0 8px 8px;
+}
+
+
+.menu-btn{
+  display: none;
+}
+
+/*fnh*/
+/*sp*/
+.sp{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:58px;
+ 
+}
+
+.img-slider{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 0px;
+  background: #1D212B;
+}
+
+.img-slider .slide{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.img-slider .slide img{
+  z-index: 1;
+  width: 100%; 
+  height: 400px;
+  border-radius: 5px;
+
+}
+
+
+.img-slider .navigation{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn{
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.img-slider .navigation .btn.active{
+  background: #2696E9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+ button {
+    text-decoration:none;
+    padding:15px;
+    display:inline-block;
+    font-size:16px;
+    color:white;
+    border:none;
+    margin: 4px 2px ;
+    border-radius: 2rem;
+    background:#023377;    
+}
+button:hover{
+    background:black;
+}
+.prd-2 img{
+     border-radius: 2rem;
+}
+
+.topp{
+  margin-top: 100px;
+}
+/*fsp*/
+
+/* Pied de page */
+footer {
+  margin-top: 100px;
+  background-color: #000;
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+footer .social a{
+    font-size: 25px;
+    color: inherit;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+footer .social a:hover{
+   color:#4080EF; 
+}
+footer .social p{
+  margin-right: 15px;
+ 
+  border-radius: 100%;
+
+  text-align:right;
+
+  cursor:pointer;
+}
+section {
+
+    margin-top:54px;
+}
+/*---bouton--*/
+.produits {
+    align-text:center;
+}
+/*fin bouton*/
+/* Fin du pied de page */

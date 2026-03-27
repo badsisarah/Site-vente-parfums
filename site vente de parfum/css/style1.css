@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+ /margin:0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Barre de navigation */
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+nav h1{
+  font-size: 100px;
+}
+nav .onglets{
+  display: flex;
+  flex-wrap:wrap; 
+}
+nav .onglets p{
+  font-size: 20px;
+  margin-right: 30px;
+  cursor:pointer;
+}
+nav .onglets input{
+  margin: 15px 30px;
+  padding: 20px;
+  border-radius: 50px;
+  border:none;
+  background-color: #f2f2f2;
+  outline:none;
+  }
+  /* Fin de la barre de navigation */
+  /*produits*/
+  .sct {
+    margin-top: 100px;
+  }
+  .produit {
+      
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-around;
+  } 
+  .produits {
+      max-width:1300;
+      margin:auto;
+      padding-left:25px;
+      padding-right:25px;
+      
+  }
+  .prd-1 {
+      flex-basis:20%;
+      padding: 50px;
+      min-width: 200px;
+      margin-bottom: 10px;
+      transition: transform 0.5 ;
+  }
+  .prd-1 img {
+      width: 200px;
+      height:150px;
+      
+  }
+  .prd-1:hover{
+      transform: translateY(-5px);
+  }
+
+ 
+  /*fin produits*/
+/* Header */
+nav .link:hover{
+  background-color: black;
+  color: white;
+  height:60%;
+   width: :60%;
+ }
+/
+
+.container{
+   flex-wrap:wrap;
+}
+
+
+
+/* Fin de la section principale */
+
+/* Pied de page */
+footer {
+  margin-top: 100px;
+  background-color: #000;
+  padding: 30px;
+  color: #fff;
+   display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+footer .social-media{
+  display: flex;
+}
+footer .social-media p{
+  margin-right: 5px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  text-align:center;
+  width: 10px;
+  cursor:pointer;
+}
+/* Fin du pied de page */
+
+@media screen and (max-width: 640px){
+  nav .onglets .link, nav h1{
+    display:none;
+  }
+  .cards .card img{
+    width: 300px;
+  }
+}
